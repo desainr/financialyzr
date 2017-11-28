@@ -1,10 +1,10 @@
 const LocalStrategy = require("passport-local").Strategy;
 const passwordHash = require("password-hash");
 const validator = require("validator");
-const Connection = require("../db/Db");
+const Connection = require("../db/DbConnection");
 
-const USER_SELECT_BY_USERNAME = "SELECT user_id, username, email, password, create_date, first_name, last_name FROM users WHERE username = ?";
-const USER_SELECT_BY_ID  = "SELECT user_id, username, email, password, create_date, first_name, last_name FROM users WHERE user_id = ?";
+const USER_SELECT_BY_USERNAME = "SELECT user_id, username, email, password, create_date, first_name, last_name, role FROM users WHERE username = ?";
+const USER_SELECT_BY_ID  = "SELECT user_id, username, email, password, create_date, first_name, last_name, role FROM users WHERE user_id = ?";
 const VERIFY_SIGNUP = "SELECT user_id, username, email, password, create_date, first_name, last_name FROM users WHERE username = ? OR email = ?";
 const INSERT_USER   = "INSERT INTO users (username, email, password, create_date, first_name, last_name) VALUES (?, ?, ?, NOW(), ?, ?)";
 
