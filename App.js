@@ -65,6 +65,7 @@ app.get("*", (req, res) => {
 
 module.exports = app;
 
+// auth functions 
 function isLoggedIn(req, res, next) {
     if(req.isAuthenticated()) {
         return next();

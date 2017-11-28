@@ -7,5 +7,8 @@ CREATE TABLE users (
     password VARCHAR(255) UNIQUE NOT NULL,
     create_date DATETIME,
     first_name VARCHAR(100),
-    last_name VARCHAR(100)
+    last_name VARCHAR(100),
+    role VARCHAR(5) DEFAULT 'USER'
 );
+
+END
