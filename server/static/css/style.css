@@ -34,3 +34,8 @@ a {
 .signup-page {
     bottom: 50%;
 }
+
+/* navbar */
+#nav {
+    margin-bottom: 4%;
+}
