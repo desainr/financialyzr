@@ -1,3 +1,5 @@
+import React, {Component} from "react";
+import {Route, Switch} from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import UploadPage from "../pages/UploadPage";
 import VisualizePage from "../pages/VisualizePage";

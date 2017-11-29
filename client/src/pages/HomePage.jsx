@@ -1,14 +1,25 @@
 import React, {Component} from "react";
-import {Panel, PageHeader} from "react-bootstrap";
+import {Row, Col, Panel} from "react-bootstrap";
 
 class HomePage extends Component{
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            username: "desainr"
+        };
+    }
+
     render() {
         return (
-            <div className="absolute-center main-page">
-                <Panel>
-                    <h4>Congrats, you logged in.</h4>
-                    <a href="/auth/logout">Logout</a>
-                </Panel>
+            <div id="homePage">
+                <Row>
+                    <Col xs={4}>
+                        <Panel>
+                            <h4>Welcome, {this.state.username}</h4>
+                        </Panel> 
+                    </Col>
+                </Row>
             </div>
         );
     }

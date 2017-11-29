@@ -7,7 +7,7 @@ import {IndexLinkContainer, LinkContainer} from "react-router-bootstrap";
 const Navigation = () => (
     <Navbar inverse>
         <Navbar.Brand>
-            <Link to="/"> Financialyzr</Link>
+            <Link to="/">Financialyzr</Link>
         </Navbar.Brand>
         <Navbar.Collapse>
             <Nav>
