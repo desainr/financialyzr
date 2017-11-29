@@ -4,6 +4,7 @@ import VisualizePage from "../pages/VisualizePage";
 import NotFound from "../pages/NotFound";
 import Navigation from "./Navigation";
 
+// Creates routing for client side 
 const Routes = () => (
     <div>
         <div id="nav">

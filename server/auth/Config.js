@@ -8,6 +8,10 @@ const USER_SELECT_BY_ID  = "SELECT user_id, username, email, password, create_da
 const VERIFY_SIGNUP = "SELECT user_id, username, email, password, create_date, first_name, last_name FROM users WHERE username = ? OR email = ?";
 const INSERT_USER   = "INSERT INTO users (username, email, password, create_date, first_name, last_name) VALUES (?, ?, ?, NOW(), ?, ?)";
 
+/**
+ * Creates configuration for login and signup authorization via Passport.js
+ * @param {*} passport - passport module
+ */
 module.exports = passport => {
     passport.serializeUser((user, done) => {
         done(null, user.user_id);

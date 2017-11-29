@@ -1,7 +1,6 @@
 const db = require("mysql");
 require("dotenv").config();
 
-
 class Database { 
     constructor() {
         this.connection = db.createConnection({
@@ -12,6 +11,12 @@ class Database {
         });
     }
 
+    /**
+     * Database connection query
+     * @param {*} sql - SQL query
+     * @param {*} params - parameters (optional)
+     * @param {*} callback - callback function
+     */
     query(sql, params = null, callback) {
         let result = null;
         if(params) {
