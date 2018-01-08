@@ -1,7 +1,7 @@
-const db = require("mysql");
-require("dotenv").config();
+const db = require('mysql');
+require('dotenv').config();
 
-class Database { 
+class Database {
     constructor() {
         this.connection = db.createConnection({
             host: process.env.DB_HOST,
@@ -17,12 +17,12 @@ class Database {
      * @param {*} params - parameters (optional)
      * @param {*} callback - callback function
      */
-    query(sql, params = null, callback) {
+    async query(sql, params = null) {
         let result = null;
         if(params) {
-            result = this.connection.query(sql, params, callback);
+            result = await this.connection.query(sql, params);
         } else {
-            result = this.connection.query(sql, callback);
+            result = await this.connection.query(sql);
         }
         return result;
     }

@@ -1,18 +1,18 @@
-import React, {Component} from "react";
-import {Row, Col, Panel} from "react-bootstrap";
+import React, {Component} from 'react';
+import {Row, Col, Panel} from 'react-bootstrap';
 
 class HomePage extends Component{
     constructor(props) {
         super(props);
 
         this.state = {
-            username: "desainr"
+            username: 'desainr'
         };
     }
 
     render() {
         return (
-            <div id="homePage">
+            <div id='homePage'>
                 <Row>
                     <Col xs={4}>
                         <Panel>
